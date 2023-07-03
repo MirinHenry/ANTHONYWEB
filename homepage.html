@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MIRIN'S STUDIO</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(pink, darkblue, orange);
+        }
+        
+        .container {
+            border: none;
+            background: green;
+            width: 1366px;
+            height: 150px;
+            top: 0;
+            left: 0;
+            position: fixed;
+        }
+        
+        .logo img {
+            width: 150px;
+            height: 100px;
+            background: red;
+            float: left;
+        }
+        
+        .heading h2 {
+            color: white;
+            width: 300px;
+            top: 0;
+            height: 100px;
+            background: ;
+            float: left;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        
+        .navbar {
+            position: relative;
+            width: 700px;
+            height: 100px;
+            background: ;
+            float: left;
+            margin-left: 175px;
+        }
+        
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar ul li a {
+            float: left;
+            padding: 10px;
+            margin-left: 50px;
+            margin-top: 30px;
+            background: orange;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        
+        .navbar ul li a:hover {
+            background: blue;
+            color: #f8f9f9;
+        }
+        
+        .navbar .fa {
+            display: none;
+        }
+        
+        .container .fa {
+            display: none;
+        }
+        
+        @media (max-width: 700px) {
+            .navbar {
+                position: absolute;
+                width: 200px;
+                height: 400px;
+                top: 0;
+                right: -200;
+                text-align: left;
+                margin-left: 370PX;
+                background: red;
+                z-index: 2;
+                transition: 1s;
+            }
+            .navbar ul li {
+                display: block;
+            }
+            .heading h2 {
+                margin-left: 50px;
+            }
+            .navbar .fa {
+                display: block;
+                color: #fff;
+                font-size: 30px;
+                margin: 10px;
+                cursor: pointer;
+            }
+            .container .fa {
+                display: block;
+                color: #fff;
+                font-size: 30px;
+                margin: 10px;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="#"><img src="female-images/female29.png"></a>
+        </div>
+        <div class="heading">
+            <h2>MIRIN'S BARBERSHOP</h2>
+
+        </div>
+
+        <div class="navbar" id="navBar">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </div>
+
+    <script>
+        var navBar = document.getElementById("navBar");
+
+
+        function showMenu() {
+            navBar.style.marginLeft = "-370";
+        }
+
+        function hideMenu() {
+            navBar.style.right = "-200px";
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
